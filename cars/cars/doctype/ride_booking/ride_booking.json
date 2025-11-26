@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-11-24 20:38:16.335863",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o5bb",
+  "order",
+  "column_break_haxl",
+  "driver",
+  "column_break_xvdq",
+  "amended_from",
+  "section_break_ybiy",
+  "routes",
+  "section_break_kjsu",
+  "kilo_price",
+  "column_break_witx",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o5bb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "amended_from.order",
+   "fieldname": "order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Order",
+   "options": "Order",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "amended_from.driver",
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_haxl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xvdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ybiy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "routes",
+   "fieldtype": "Table",
+   "label": "Routes",
+   "options": "Ride booking Route"
+  },
+  {
+   "fieldname": "section_break_kjsu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "kilo_price",
+   "fieldtype": "Currency",
+   "label": "Kilo price"
+  },
+  {
+   "fieldname": "column_break_witx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-24 22:43:26.590499",
+ "modified_by": "Administrator",
+ "module": "Cars",
+ "name": "Ride Booking",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
