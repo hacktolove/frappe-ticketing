@@ -8,7 +8,8 @@
  "field_order": [
   "founding_year",
   "customer_care_number",
-  "headquarters"
+  "headquarters",
+  "route"
  ],
  "fields": [
   {
@@ -30,9 +31,16 @@
    "in_list_view": 1,
    "label": "Headquarters",
    "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
   }
  ],
  "grid_page_length": 50,
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -40,7 +48,7 @@
    "link_fieldname": "Name"
   }
  ],
- "modified": "2025-11-25 21:48:48.775186",
+ "modified": "2025-12-26 18:05:34.753892",
  "modified_by": "Administrator",
  "module": "Cars",
  "name": "Airline",
@@ -60,6 +68,7 @@
    "write": 1
   }
  ],
+ "route": "airlines",
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",

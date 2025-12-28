@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-12-27 14:31:46.683526",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-12-27 14:42:49.124069",
+ "modified_by": "Administrator",
+ "module": "Cars",
+ "name": "Add-on popularity",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select \n    `tabAirplane Ticket Add-on Type`.name ,\n    count(`tabAirplane Ticket Add-on Item`.name) as 'Sold Count'\n    \nfrom\n    `tabAirplane Ticket Add-on Type`\njoin \n    `tabAirplane Ticket Add-on Item` \n        on `tabAirplane Ticket Add-on Item`.item = `tabAirplane Ticket Add-on Type`.name\n\ngroup by `tabAirplane Ticket Add-on Type`.name\n",
+ "ref_doctype": "Airplane Ticket Add-on Type",
+ "report_name": "Add-on popularity",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

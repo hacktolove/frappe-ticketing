@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class FlightPassenger(Document):
+class AirplaneFlight(Document):
 
-	def before_save(self):
-		self.full_name = f"{self.first_name} {self.last_name}"
+  def on_submit(self):
+    self.status = "Completed"
