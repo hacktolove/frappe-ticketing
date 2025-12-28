@@ -9,7 +9,8 @@
   "founding_year",
   "customer_care_number",
   "headquarters",
-  "route"
+  "route",
+  "title"
  ],
  "fields": [
   {
@@ -37,6 +38,11 @@
    "fieldtype": "Data",
    "label": "Website",
    "options": "URL"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
   }
  ],
  "grid_page_length": 50,
@@ -48,7 +54,7 @@
    "link_fieldname": "Name"
   }
  ],
- "modified": "2025-12-26 18:05:34.753892",
+ "modified": "2025-12-28 21:02:52.533003",
  "modified_by": "Administrator",
  "module": "Cars",
  "name": "Airline",

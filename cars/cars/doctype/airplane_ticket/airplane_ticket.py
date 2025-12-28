@@ -6,11 +6,6 @@ from frappe.model.document import Document
 from cars.cars.doctype.airplane_ticket.airplane_helper import generate_seat
 
 class AirplaneTicket(Document):
-    # STATES = {
-    # 	"Booked": "Booked",
-    # 	"Checked-In": "Checked-In",
-    # 	"Boarded": "Boarded"
-    # }
 
   def validate(self):
         total_amount = self.flight_price
@@ -24,15 +19,12 @@ class AirplaneTicket(Document):
                 unique_add_ons.append(add_on)
                 total_amount += add_on.amount
 
-        # Replace child table correctly
         self.set("add_ons", unique_add_ons)
 
-        # Set total
         self.total_amount = total_amount
         if(self.status != "Boarded"):
             frappe.throw("Status can only be updated to Boarded")
 
-        # Validate capacity not exceeded
         self.validate_capacity_not_exceeded()
 
   def validate_capacity_not_exceeded(self):

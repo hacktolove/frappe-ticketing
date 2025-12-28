@@ -15,7 +15,7 @@ frappe.ui.form.on("Airplane Ticket", {
                 frappe.call({
                     method: 'cars.cars.doctype.airplane_ticket.airplane_ticket.select_seat',
                     args: {
-                        name: frm.doc.name,   // ← current document name
+                        name: frm.doc.name,
                         seat: values.seat
                     },
                     callback: () => {
